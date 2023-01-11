@@ -1,0 +1,53 @@
+:root {
+  --color-green: #198754;
+  --color-teal: #0085a1;
+  --color-cyan: #0dcaf0;
+  --color-gray: #6c757d;
+  --color-red: #ff0000;
+}
+p,
+#articles {
+  color: var(--color-green);
+}
+
+h1 {
+  color: var(--color-gray);
+}
+
+.article-heading {
+  color: var(--color-teal);
+}
+.show {
+  border: 3px solid var(--color-teal);
+  padding: 5px;
+  background-color: bisque;
+}
+a:link,
+a:focus {
+  color: var(--color-green);
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+a:hover,
+a:active {
+  color: var(--color-teal);
+  font-weight: 800;
+}
+
+button,
+input[type="submit"] {
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 1px var(--color-green);
+  border: 1px solid var(--color-cyan);
+  font-size: 12px;
+  padding: 4px 10px;
+  margin-top: 5px;
+}
+.err-msg,
+h2,
+ul li {
+  color: var(--color-red);
+  font-style: italic;
+  font-size: 13px;
+}

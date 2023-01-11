@@ -1,0 +1,50 @@
+<%= form_with(model: article) do |form| %>
+  <% if article.errors.any? %>
+    <div>
+      <h2><%= pluralize(article.errors.count, "error") %> prohibited this article from being saved:</h2>
+
+      <ul>
+        <% article.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ <div class="show">
+  <div>
+    <%= form.label :moviename, style: "display: block" %>
+    <%= form.text_field :moviename %>
+    <% @article.errors.full_messages_for(:moviename).each do |message| %>
+      <div class="err-msg"><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_field :description %>
+     <% @article.errors.full_messages_for(:description).each do |message| %>
+      <div class="err-msg"><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :directorName, style: "display: block" %>
+    <%= form.text_field :directorName %>
+     <% @article.errors.full_messages_for(:directorName).each do |message| %>
+      <div class="err-msg"><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :language, style: "display: block" %>
+    <%= form.text_field :language %>
+     <% @article.errors.full_messages_for(:language).each do |message| %>
+      <div class="err-msg"><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+  </div>
+<% end %>

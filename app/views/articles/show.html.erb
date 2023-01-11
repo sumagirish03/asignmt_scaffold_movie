@@ -1,0 +1,11 @@
+<p><%= notice %></p>
+
+<%= render @article %>
+<br/>
+<div class="show">
+  <%= link_to "Edit this article", edit_article_path(@article) %> |
+  <%= link_to "Back to articles", articles_path %>
+ <p>
+  <%= button_to "Destroy this article", @article, method: :delete %>
+ </P> 
+</div>
